@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build scripts (not needed for deployment)
+make-zip.bat
+make-zip.ps1
+make-st-moritz-zip.bat
+rename-updated-zip.bat
+
+# Old CSS/JS (superseded by single-file index.html)
+css/
+js/
+
+# Images (will be added by user)
+images/
+
+# Temp files
+*.log
+script_check.js
