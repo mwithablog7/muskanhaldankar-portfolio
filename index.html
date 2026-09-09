@@ -759,7 +759,50 @@ main { padding-top: var(--nav-h); }
 /* Social page responsive */
 @media (max-width: 768px) { .social-card { grid-template-columns: 1fr; } }
 
-/* ---------- 5. PRINT ---------- */
+/* ---------- 5. RESUME PAGE ---------- */
+.resume-page { background: #fff; color: #1A1412; padding: 3rem 0; }
+.resume-page .wrap { max-width: 800px; margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+.resume-header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 2px solid #1A1412; }
+.resume-header h1 { font-family: var(--font-d); font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1; letter-spacing: -.02em; margin-bottom: .5rem; }
+.resume-header .resume-title { font-family: var(--font-m); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: #7A3B3B; margin-bottom: 1rem; }
+.resume-header .resume-contact { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem 1.8rem; font-family: var(--font-m); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #6E6054; }
+.resume-header .resume-contact span::after { content: '·'; margin-left: 1.8rem; color: #D4C8B8; }
+.resume-header .resume-contact span:last-child::after { content: ''; }
+.resume-section { margin-bottom: 2rem; }
+.resume-section-title { font-family: var(--font-m); font-size: 9px; letter-spacing: .22em; text-transform: uppercase; color: #7A3B3B; border-bottom: 1px solid #E8DFD2; padding-bottom: .4rem; margin-bottom: 1rem; }
+.resume-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.resume-item { margin-bottom: 1.3rem; }
+.resume-item-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: .2rem; }
+.resume-item-title { font-family: var(--font-d); font-size: 1.2rem; line-height: 1.2; }
+.resume-item-org { font-style: italic; color: #6E6054; font-family: var(--font-d); font-size: .95rem; }
+.resume-item-meta { font-family: var(--font-m); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: #8A7B6B; margin-bottom: .4rem; }
+.resume-item-desc { font-size: 13px; color: #4A3E35; line-height: 1.6; max-width: 55ch; }
+.resume-item-desc li { padding: .15rem 0 .15rem 1rem; position: relative; }
+.resume-item-desc li::before { content: '—'; position: absolute; left: 0; color: #7A3B3B; }
+.resume-skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .3rem 1.5rem; }
+.resume-skill-cat { margin-bottom: .6rem; }
+.resume-skill-cat h4 { font-family: var(--font-m); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: #7A3B3B; margin-bottom: .3rem; }
+.resume-skill-cat p { font-size: 11.5px; color: #4A3E35; line-height: 1.5; }
+.resume-download-bar { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+.resume-download-bar .btn { font-size: 10px; }
+.resume-watermark { text-align: center; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #E8DFD2; }
+.resume-watermark span { font-family: var(--font-m); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: #A89888; }
+
+/* Print styles — resume */
+@media print {
+  .grain, .site-header, .site-footer, .nav-burger, .mobile-menu, .skip-link, #cursorDot, #cursorRing, .resume-download-bar { display: none !important; }
+  body { background: #fff; color: #111; font-size: 10.5pt; }
+  main { padding-top: 0; }
+  .sec { padding-block: 1.5rem; }
+  .resume-page { padding: 0; }
+  .resume-page .wrap { max-width: 100%; padding: 0; }
+  .resume-header { border-bottom-width: 1.5px; }
+  a { color: #111; text-decoration: none; }
+  .dark, .theme-dark { background: #fff; color: #111; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------- 6. PRINT (GENERIC) ---------- */
 @media print {
   .grain, .site-header, .site-footer, .nav-burger, .mobile-menu, .skip-link, #cursorDot, #cursorRing, .btn, .hero-ctas { display: none !important; }
   body { background: #fff; color: #111; font-size: 11pt; }
@@ -829,6 +872,7 @@ main { padding-top: var(--nav-h); }
       <a href="#/projects" data-route="projects">Projects</a>
       <a href="#/github" data-route="github">GitHub</a>
       <a href="#/contact" data-route="contact">Contact</a>
+      <a href="#/resume" data-route="resume">CV</a>
     </div>
     <div class="nav-right">
       <span class="avail"><span class="pdot"></span>Available</span>
@@ -851,6 +895,7 @@ main { padding-top: var(--nav-h); }
     <a href="#/github">GitHub <span class="n">09</span></a>
     <a href="#/social">Social <span class="n">10</span></a>
     <a href="#/contact">Contact <span class="n">11</span></a>
+    <a href="#/resume">CV / Resume <span class="n">12</span></a>
   </nav>
   <div class="mm-foot">
     <a href="mailto:muskanhaldankar07@gmail.com">muskanhaldankar07@gmail.com</a>
@@ -881,6 +926,7 @@ main { padding-top: var(--nav-h); }
         <a href="#/github">GitHub</a>
         <a href="#/social">Social</a>
         <a href="#/contact">Contact</a>
+        <a href="#/resume">CV / Resume</a>
       </div>
       <div class="footer-col">
         <h4>Connect</h4>
@@ -1222,7 +1268,8 @@ const Router = (() => {
     'motorsport': { title: 'Motorsport — Muskan Haldankar', render: MotorsportPage },
     'github': { title: 'GitHub — Muskan Haldankar', render: GitHubPage },
     'social': { title: 'Social — Muskan Haldankar', render: SocialPage },
-    'contact': { title: 'Contact — Muskan Haldankar', render: ContactPage }
+    'contact': { title: 'Contact — Muskan Haldankar', render: ContactPage },
+    'resume': { title: 'Resume — Muskan Haldankar', render: ResumePage }
   };
   function parse() { return decodeURIComponent(location.hash.replace(/^#\/?/, '')).split('/').filter(Boolean); }
   function resolve(seg) {
@@ -2125,6 +2172,145 @@ function SocialPage(root) {
   );
 }
 
+/* === RESUME === */
+function ResumePage(root) {
+  var SEP = String.fromCharCode(183);
+  var DASH = String.fromCharCode(8212);
+  var ARROW = String.fromCharCode(8595);
+
+  var expItems = EXPERIENCE.map(function(exp) {
+    return el('div', { class: 'resume-item' },
+      el('div', { class: 'resume-item-header' },
+        el('div', null,
+          el('div', { class: 'resume-item-title' }, exp.role),
+          el('div', { class: 'resume-item-org' }, exp.org)
+        ),
+        el('div', { class: 'resume-item-meta' }, exp.where + ' ' + SEP + ' ' + exp.dates)
+      ),
+      el('div', { class: 'resume-item-desc' },
+        el('ul', null,
+          exp.duties.map(function(d) { return el('li', null, d); })
+        )
+      )
+    );
+  });
+
+  var eduItems = EDUCATION.map(function(edu) {
+    return el('div', { class: 'resume-item' },
+      el('div', { class: 'resume-item-header' },
+        el('div', null,
+          el('div', { class: 'resume-item-title' }, edu.title),
+          el('div', { class: 'resume-item-org' }, edu.org)
+        ),
+        el('div', { class: 'resume-item-meta' }, edu.where + ' ' + SEP + ' ' + edu.dates)
+      ),
+      edu.courses ? el('div', { class: 'resume-item-desc', style: 'margin-top:.3rem' },
+        el('span', { style: 'font-family:var(--font-m);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#8A7B6B' }, 'Key Courses: '),
+        el('span', { style: 'font-size:12px;color:#4A3E35' }, edu.courses.join(' ' + SEP + ' '))
+      ) : null
+    );
+  });
+
+  var skillItems = SKILL_GROUPS.map(function(g) {
+    return el('div', { class: 'resume-skill-cat' },
+      el('h4', null, g.name),
+      el('p', null, g.items.join(' ' + SEP + ' '))
+    );
+  });
+
+  var langItems = LANGUAGES.map(function(l) {
+    return el('div', { style: 'display:flex;justify-content:space-between;align-items:baseline;padding:.3rem 0;border-bottom:1px solid #E8DFD2' },
+      el('span', { style: 'font-family:var(--font-d);font-size:1rem' }, l.name),
+      el('span', { style: 'font-family:var(--font-m);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:#7A3B3B' }, l.level + (l.note ? ' ' + DASH + ' ' + l.note : ''))
+    );
+  });
+
+  var certItems = CERTIFICATIONS.map(function(c) {
+    return el('div', { style: 'display:flex;justify-content:space-between;align-items:baseline;padding:.4rem 0;border-bottom:1px solid #E8DFD2' },
+      el('span', { style: 'font-family:var(--font-d);font-size:1rem' }, c.t),
+      el('span', { style: 'font-family:var(--font-m);font-size:9.5px;letter-spacing:.18em;color:#7A3B3B' }, c.y)
+    );
+  });
+
+  root.append(
+    el('div', { class: 'resume-page' },
+      el('div', { class: 'wrap' },
+
+        /* Download bar */
+        el('div', { class: 'resume-download-bar' },
+          el('button', { class: 'btn btn-green btn-sm', onclick: function() { window.print(); } },
+            ARROW + ' Save as PDF'
+          ),
+          el('a', { href: '#/contact', class: 'btn btn-sm' },
+            'Back to Portfolio'
+          )
+        ),
+
+        /* Header */
+        el('div', { class: 'resume-header' },
+          el('h1', null, SITE.name),
+          el('div', { class: 'resume-title' }, SITE.roles),
+          el('div', { class: 'resume-contact' },
+            el('span', null, SITE.location),
+            el('span', null, SITE.email),
+            el('span', null, SITE.workEmail + '@gmail.com'),
+            el('span', null, 'linkedin.com/in/muskan-haldankar'),
+            el('span', null, '@mwithablog')
+          )
+        ),
+
+        /* Professional Summary */
+        el('div', { class: 'resume-section' },
+          el('div', { class: 'resume-section-title' }, 'Professional Summary'),
+          el('p', { style: 'font-size:13.5px;color:#4A3E35;line-height:1.7;max-width:65ch' },
+            'Marketing professional with a foundation in Business Administration and a focus on the intersection of analytics, digital strategy and creative thinking. Experienced in marketing communications, content planning, performance reporting and brand communication. Currently developing expertise in luxury marketing and motorsport marketing ' + DASH + ' areas where precision, storytelling and premium brand thinking converge.'
+          )
+        ),
+
+        /* Experience */
+        el('div', { class: 'resume-section' },
+          el('div', { class: 'resume-section-title' }, 'Experience'),
+          expItems
+        ),
+
+        /* Education */
+        el('div', { class: 'resume-section' },
+          el('div', { class: 'resume-section-title' }, 'Education'),
+          eduItems
+        ),
+
+        /* Skills */
+        el('div', { class: 'resume-section' },
+          el('div', { class: 'resume-section-title' }, 'Skills & Capabilities'),
+          el('div', { class: 'resume-skills-grid' },
+            skillItems
+          )
+        ),
+
+        /* Languages */
+        el('div', { class: 'resume-section' },
+          el('div', { class: 'resume-section-title' }, 'Languages'),
+          el('div', { class: 'resume-two-col' },
+            langItems
+          )
+        ),
+
+        /* Certifications */
+        el('div', { class: 'resume-section' },
+          el('div', { class: 'resume-section-title' }, 'Certifications'),
+          certItems
+        ),
+
+        /* Watermark */
+        el('div', { class: 'resume-watermark' },
+          el('span', null, 'muskanhaldankar.com ' + SEP + ' ' + SITE.year)
+        )
+
+      )
+    )
+  );
+}
+
 /* === CONTACT === */
 function ContactPage(root) {
 
@@ -2158,6 +2344,10 @@ function ContactPage(root) {
           /* Left: CTA */
           el('div', null,
             Button('Send an Email', { href: 'mailto:' + SITE.email, solid: true, lg: true }),
+            el('a', { href: '#/resume', style: 'display:inline-flex;align-items:center;gap:.65rem;padding:1rem 1.6rem;font-family:var(--font-m);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);margin-top:.8rem;transition:color .3s,border-color .3s,background .3s' },
+              el('span', { html: '&#8595;' }),
+              el('span', null, 'Download Resume')
+            ),
             el('div', { style: 'margin-top:1rem;display:flex;align-items:center;gap:.5rem' },
               el('span', { style: 'width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none' }),
               el('span', { style: 'font-family:var(--font-m);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute-2)' }, 'Florence, Italy · Available worldwide')

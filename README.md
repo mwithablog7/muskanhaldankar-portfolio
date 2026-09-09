@@ -1,99 +1,199 @@
-# Muskan Haldankar — Portfolio
+<div align="center">
 
-A personal portfolio website for **Muskan Haldankar** — Marketing Analytics · Digital Strategy · Creative Thinking.
+# Muskan Haldankar
 
-## Design Direction
+### Marketing Analytics · Digital Marketing · Creative Strategy
 
-- **Palette:** Rich & warm — cream, deep taupe, muted burgundy, dark chocolate
-- **Typography:** Playfair Display (editorial serif) · DM Sans (body) · IBM Plex Mono (labels)
-- **Feel:** Luxury editorial · modern marketing portfolio · subtle motorsport precision
+<br>
 
-## How to use it
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Live-brightgreen?style=for-the-badge)](https://mwithablog7.github.io/muskanhaldankar-portfolio/)
+[![Resume](https://img.shields.io/badge/📄_Resume-Download-blue?style=for-the-badge&logo=github)](https://mwithablog7.github.io/muskanhaldankar-portfolio/#/resume)
+[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/muskan-haldankar)
+[![GitHub](https://img.shields.io/badge/🐙_GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/mwithablog)
+[![Instagram](https://img.shields.io/badge/📸_Instagram-Follow-E4405F?style=for-the-badge&logo=instagram)](https://www.instagram.com/mwithablog/)
 
-- **Open locally:** double-click `index.html` — everything works from `file://`.
-- **Deploy:** upload this folder to any static host (Netlify, Vercel, GitHub Pages, Cloudflare Pages).
-  There is no build step. Nothing to install.
+<br>
 
-## Adding Images
+*A personal portfolio — elegant, self-contained, zero dependencies.*
 
-1. Drop your images into the `images/` folder next to `index.html`.
-2. Open `index.html`, find the `IMAGES` object near the top of the `<script>` (search for `IMAGES`).
+*Florence, Italy · Available worldwide*
+
+</div>
+
+---
+
+## About
+
+A luxury-editorial portfolio built as a **single, self-contained HTML file** — no build tools, no frameworks, no dependencies.
+
+The site communicates my positioning as a marketing professional with strengths in **analytics**, **digital strategy**, and **creative thinking**, with a developing interest in **luxury marketing** and **motorsport marketing**.
+
+### Design Philosophy
+
+| Principle | Implementation |
+|-----------|---------------|
+| **Typography** | Playfair Display (editorial serif) · DM Sans (body) · IBM Plex Mono (labels) |
+| **Palette** | Warm ivory · soft taupe · champagne · deep espresso · muted burgundy accent |
+| **Feel** | Luxury editorial · modern marketing portfolio · subtle motorsport precision |
+| **Philosophy** | Premium through typography, whitespace and composition — not decoration |
+
+### Pages
+
+| Page | Route | Purpose |
+|------|-------|---------|
+| 🏠 **Home** | `#/` | Hero, key areas, featured project, exploring section |
+| 👤 **About** | `#/about` | Bio, career direction, education, skills, languages |
+| 💼 **Experience** | `#/experience` | Professional timeline with motorsport emphasis |
+| 📁 **Projects** | `#/projects` | 6 project slots with case study structure |
+| 📊 **Analytics** | `#/analytics` | Marketing analytics focus |
+| 🎨 **Creative** | `#/creative` | Creative work and photography |
+| 💡 **Brand Strategy** | `#/brand` | Brand strategy interests |
+| 🏎️ **Motorsport** | `#/motorsport` | Motorsport marketing experience |
+| 🐙 **GitHub** | `#/github` | Analytics & Experiments |
+| 📸 **Social** | `#/social` | Two Instagram accounts, separate treatments |
+| ✉️ **Contact** | `#/contact` | Professional contact links |
+| 📄 **CV / Resume** | `#/resume` | Downloadable, print-optimized resume |
+
+---
+
+## Quick Start
+
+### Option 1: Open Locally
+```bash
+# Double-click index.html — works from file:// protocol
+open index.html
+```
+
+### Option 2: Deploy Anywhere
+Upload the `muskan-portfolio/` folder to any static host:
+- **[GitHub Pages](https://pages.github.com/)** — Free, instant
+- **[Netlify Drop](https://app.netlify.com/drop)** — Drag and drop
+- **[Cloudflare Pages](https://pages.cloudflare.com/)** — Fast, free, custom domain
+- **[Vercel](https://vercel.com)** — Zero-config
+
+No build step. No `npm install`. No configuration.
+
+---
+
+## Customisation
+
+### Adding Images
+
+1. Drop images into the `images/` folder next to `index.html`
+2. Open `index.html` and find the `IMAGES` object near the top of the `<script>` block
 3. Set the paths:
 
-```js
+```javascript
 const IMAGES = {
-  hero: 'images/hero.jpg',        /* Hero section visual */
-  about: 'images/about.jpg',      /* About page photo */
+  hero: 'images/hero.jpg',        // Hero section visual
+  about: 'images/about.jpg',      // About page photo
   projects: {
     'ecodolomitesgt': 'images/ecodolomitesgt.jpg',
-    'mwithablog': null,
-    'f1-social-media': null,
-    'luxury-brand': null,
-    'analytics-dashboard': null,
-    'photography': null
+    'mwithablog': null,           // null = shows default visual
   }
 };
 ```
 
-Set any value to `null` to show the default abstract visual instead.
+**Recommended sizes:**
+| Image | Dimensions | Ratio |
+|-------|-----------|-------|
+| Hero | 800 × 1000px | 4:5 |
+| About | 600 × 800px | 3:4 |
+| Projects | 800 × 500px | 16:10 |
 
-**Recommended image sizes:**
-- Hero: 800×1000px (portrait, 4:5 ratio)
-- About: 600×800px (portrait, 3:4 ratio)
-- Projects: 800×500px (landscape, 16:10 ratio)
+### Editing Content
 
-## Editing Content
+All content lives in **one place**: the `DATA LAYER` block near the top of the `<script>` in `index.html`.
 
-All content lives in **one place**: the `DATA LAYER` block near the top of the `<script>` in `index.html` (search for `1. DATA LAYER`). Edit plain objects — no build, no recompile.
+| Data | Variable | What to edit |
+|------|----------|-------------|
+| Identity & contact | `SITE` | Name, headline, email, LinkedIn, GitHub, Instagram |
+| Images | `IMAGES` | Hero, about, project thumbnails |
+| Projects | `PROJECTS` | Titles, descriptions, tools, case studies |
+| Experience | `EXPERIENCE` | Roles, duties, dates, highlights |
+| Skills | `SKILL_GROUPS` | Category groups and items |
+| Education | `EDUCATION` | Degrees, courses, dates |
+| Certifications | `CERTIFICATIONS` | Cert names and years |
+| Languages | `LANGUAGES` | Languages and proficiency levels |
 
-| Data | Variable | What you can change |
-|---|---|---|
-| Contact & identity | `SITE` | name, headline, email, LinkedIn, GitHub, Instagram |
-| Images | `IMAGES` | hero, about, project thumbnails |
-| Projects | `PROJECTS` | titles, descriptions, tools, case studies, demo URLs |
-| Experience | `EXPERIENCE` | roles, duties, dates, highlights |
-| Skills | `SKILL_GROUPS` | toolbox groups |
-| Education / certs / languages | `EDUCATION`, `CERTIFICATIONS`, `LANGUAGES` | as labelled |
+---
 
-## Site Sections
+## Architecture
 
-1. **Home** — Hero with positioning, key areas, featured project, exploring section
-2. **About** — Bio, career direction, education, skills, languages
-3. **Experience** — Professional timeline with motorsport emphasis
-4. **Projects** — 6 project slots with case study structure
-5. **GitHub** — Analytics & Experiments with planned repos
-6. **Social** — Two Instagram accounts, separate treatments
-7. **Contact** — Clean contact links and email CTA
+```
+muskan-portfolio/
+├── index.html          ← The entire site (one file)
+├── images/             ← Add your photos here
+├── README.md           ← This file
+└── .gitignore
+```
+
+### Inside `index.html`
+
+```
+<style>   — tokens → base → components → pages → resume → print
+<script>  — 1. DATA LAYER (edit here)
+            2. CORE (helpers, motion, router)
+            3. COMPONENTS (Button, SectionHeader, Tags)
+            4. PAGES (Home, About, Experience, Projects, Contact, GitHub, Social, Resume)
+            5. BOOT
+```
+
+---
+
+## Key Features
+
+| Feature | Details |
+|---------|---------|
+| **Zero dependencies** | Vanilla JavaScript, no frameworks, no build step |
+| **Self-contained** | Single HTML file — inline CSS, JS, SVG |
+| **Fast loading** | One HTTP request, lazy page renders |
+| **Dark / Light theme** | Auto-detects system preference with manual toggle |
+| **Responsive** | Mobile-first, adapts from 320px to ultrawide |
+| **Accessible** | Skip link, semantic landmarks, keyboard nav, focus states, reduced motion |
+| **Print-optimised** | Resume page is designed for PDF export via browser print |
+| **SEO-ready** | Meta tags, Open Graph, semantic HTML |
+| **Image system** | Drop in photos, set paths in `IMAGES` — placeholder visuals when empty |
+
+---
 
 ## Positioning Rules
 
-- Primary: Marketing Analytics · Digital Strategy · Creative Thinking
-- Aspirational (NOT yet professional): Luxury Marketing, F1/Motorsport
-- ECOdolomitesGT: presented as real motorsport experience
-- F1: presented as aspiration / area of interest
-- Luxury: positioned as "developing toward"
-- Never invent experience, clients, results or statistics
-- Clearly label independent projects
+This portfolio follows strict positioning guidelines:
 
-## Structure
+- ✅ **Marketing Analytics · Digital Marketing · Creative Strategy** — primary positioning
+- ✅ **ECOdolomitesGT** — real motorsport marketing experience
+- ✅ **Brand Strategy · Luxury Marketing · Motorsport Marketing · F1** — areas of interest and development
+- ❌ Never claims professional experience in luxury marketing or Formula 1
+- ❌ Never invents clients, results, statistics, or job titles
+- ❌ Independent projects clearly labelled as independent
 
-`index.html` is one self-contained file:
+---
+
+## Tech Stack
 
 ```
-<style>  — tokens → base → components → pages → print
-<script> — 1. DATA LAYER (edit here)
-          2. CORE (helpers, motion, router)
-          3. COMPONENTS (Button, SectionHeader, Tags…)
-          4. PAGES (Home, About, Experience, Projects, Contact, GitHub, Social)
-          5. BOOT
+HTML5      — Semantic markup, accessibility
+CSS3       — Custom properties, grid, clamp(), container queries
+JavaScript — ES6+, SPA router, Intersection Observer, no dependencies
+Fonts      — Google Fonts (Playfair Display, DM Sans, IBM Plex Mono)
 ```
 
-## Accessibility
+---
 
-Skip link, semantic landmarks, keyboard navigation, visible focus states, reduced-motion support, and a theme toggle (AUTO / LIGHT / DARK) that persists.
+## Print / PDF Export
 
-## Tech
+1. Navigate to `#/resume` (or click **CV / Resume** in the nav)
+2. Click **"Save as PDF"** or press `Ctrl/Cmd + P`
+3. Select **"Save as PDF"** as the destination
+4. The resume is designed to print cleanly on A4/Letter
 
-- Zero dependencies, zero build — vanilla ES SPA with hash-based routing
-- Fast initial load: one request, inline CSS/JS, lazy page renders
-- Dark/light theme follows `prefers-color-scheme` with manual override
+---
+
+<div align="center">
+
+**Built by Muskan Haldankar** · Florence, Italy
+
+*Marketing Analytics · Digital Marketing · Creative Strategy*
+
+</div>
