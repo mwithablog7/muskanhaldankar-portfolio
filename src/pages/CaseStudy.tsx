@@ -46,6 +46,12 @@ export function CaseStudy() {
         <p className="hero__intro">{project.shortDescription}</p>
 
         <div className="case__meta">
+          {project.organization && (
+            <div className="case__meta-item">
+              <span className="case__meta-label">Organisation</span>
+              {project.organization}
+            </div>
+          )}
           {project.role && (
             <div className="case__meta-item">
               <span className="case__meta-label">My role</span>
@@ -85,6 +91,17 @@ export function CaseStudy() {
         <section className="case-section">
           <h2>Objective</h2>
           <p>{project.objective}</p>
+        </section>
+      )}
+
+      {project.responsibilities && project.responsibilities.length > 0 && (
+        <section className="case-section">
+          <h2>Responsibilities</h2>
+          <ul>
+            {project.responsibilities.map((r, i) => (
+              <li key={i}>{r}</li>
+            ))}
+          </ul>
         </section>
       )}
 

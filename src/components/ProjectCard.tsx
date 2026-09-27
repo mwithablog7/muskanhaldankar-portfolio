@@ -18,7 +18,11 @@ export function ProjectCard({ project }: { project: Project }) {
         )}
         <div className="card__meta">
           <span>{project.category}</span>
-          {project.date && <span>{project.date}</span>}
+          {(project.organization || project.date) && (
+            <span>
+              {[project.organization, project.date].filter(Boolean).join(' · ')}
+            </span>
+          )}
         </div>
         <h3 className="card__title">
           <Link to={`/work/${project.slug}`}>{project.title}</Link>

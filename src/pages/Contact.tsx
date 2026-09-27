@@ -59,7 +59,7 @@ export function Contact() {
             <div className="contact-row" key={link.url}>
               <div>
                 <span className="contact-row__label">{link.label}</span>
-                <span className="contact-row__value">{link.url}</span>
+                <span className="contact-row__value">{link.display ?? link.url}</span>
               </div>
               <a
                 className="btn btn--ghost btn--sm"

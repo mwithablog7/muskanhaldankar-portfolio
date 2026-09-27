@@ -31,6 +31,8 @@ export type Project = {
   title: string;
   /** One of the categories listed in CATEGORIES below. */
   category: string;
+  /** Employer / organisation / platform context, e.g. 'La Marzocco — Florence, Italy'. */
+  organization?: string;
   /** 1–2 sentence summary shown on the project card. */
   shortDescription: string;
   /** Full description for the case-study page ("Overview"). Multiple paragraphs allowed. */
@@ -41,6 +43,8 @@ export type Project = {
   objective?: string;
   /** What YOU personally did. */
   role?: string;
+  /** What you were responsible for — shown as a bullet list. */
+  responsibilities?: string[];
   /** How you approached the work. */
   process?: string;
   /** Tools you actually used. No invented tool names. */
@@ -73,39 +77,157 @@ export type Project = {
 
 /** Filter categories — edit freely. Empty categories are handled gracefully. */
 export const CATEGORIES = [
+  'Professional Experience',
+  'Digital & Content',
+  'Independent Marketing',
   'Marketing',
-  'Analytics',
-  'Content',
-  'Consumer Behaviour',
-  'Creative Technology',
   'Academic',
-  'Professional',
 ];
 
 export const PROJECTS: Project[] = [
   /* ---------------------------------------------------------------- *
-   *  FIA ECO RALLY CUP — real professional experience                *
-   *  (No confidential material, figures or job titles are included.)  *
+   *  FIA ECO RALLY CUP — most detailed case study                    *
+   *  (No confidential material, figures or sponsor documents.)        *
    * ---------------------------------------------------------------- */
   {
     slug: 'fia-eco-rally-cup-communications',
     title: 'FIA Eco Rally Cup — Communications Review & Analysis',
-    category: 'Professional',
+    category: 'Professional Experience',
+    organization: 'Automobile Club Trento — ECOdolomitesGT 2026',
+    date: 'Jul 2026 – Oct 2026',
     shortDescription:
-      'Remote communications work connected with the FIA Eco Rally Cup / ECOdolomitesGT — reviewing material, analysing sponsorship communication, and structuring long event guidelines into information people can actually use.',
+      'Supported marketing communications and event-related activities for an FIA-sanctioned electric vehicle rally in Italy.',
     detailedDescription:
       'Communications-related work carried out remotely for the FIA Eco Rally Cup / ECOdolomitesGT. The work covered reviewing communications material, analysing sponsorship communication, researching and synthesising event and organisational guidelines, creating structured summaries, and preparing presentation material — turning lengthy documents into clear, usable information.',
     context:
       'The event runs with its own organisational guidelines and sponsorship communication to manage. I supported the communications side remotely, working from the source material provided.',
     objective:
       'To make long, dense guidelines and communication material easier to understand and use, so the information could support the event’s communications work.',
-    role:
-      'Remote communications-related work: reviewing communications material, analysing sponsorship communication, research and synthesis, structured summaries, and preparing presentation material.',
+    role: 'Marketing & Events Support',
+    responsibilities: [
+      'Supported marketing communications and social media updates for the event.',
+      'Conducted sponsor and partnership research to support outreach activities.',
+      'Assisted with communications planning and event visibility initiatives.',
+      'Researched and synthesised information into practical marketing and communications materials.',
+      'Supported the organising team with content and event-related marketing activities.',
+    ],
     process:
       'Worked through the material in stages — review the documents and event guidelines, research and synthesise the relevant points, structure what mattered into clear summaries, then shape that into presentation-ready material.',
     outcome:
       'Structured summaries and presentation material built from lengthy event and organisational guidelines — hard-to-use documents turned into clear, usable information.',
-    tags: ['Communications', 'Research'],
+    tags: ['Communications', 'Research', 'Events'],
+  },
+
+  /* ---------------------------------------------------------------- *
+   *  mwithablog — independent marketing project                      *
+   * ---------------------------------------------------------------- */
+  {
+    slug: 'mwithablog',
+    title: 'mwithablog',
+    category: 'Independent Marketing',
+    organization: 'Instagram & LinkedIn',
+    date: 'Mar 2026 – Present',
+    shortDescription:
+      'Independent marketing project focused on digital marketing, consumer behaviour, content strategy and digital experiences.',
+    responsibilities: [
+      'Develop and test marketing content concepts.',
+      'Apply audience targeting and social media strategy.',
+      'Analyse content performance and audience response.',
+      'Refine content themes, formats and messaging based on performance observations.',
+      'Explore consumer behaviour, brand communication and digital marketing through practical content.',
+    ],
+    links: [
+      { label: 'Instagram', url: 'https://www.instagram.com/mwithablog/' },
+      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/muskanhaldankar' },
+    ],
+    tags: ['Content Strategy', 'Consumer Behaviour'],
+  },
+
+  /* ---------------------------------------------------------------- *
+   *  AI-ASSISTED CONTENT & CHANNEL MANAGEMENT                        *
+   *  Confidential project — the channel is NEVER named or identified. *
+   * ---------------------------------------------------------------- */
+  {
+    slug: 'ai-assisted-content-management',
+    title: 'AI-Assisted Content & Channel Management',
+    category: 'Digital & Content',
+    organization: 'Confidential Digital Content Project — TikTok & YouTube',
+    date: 'Ongoing',
+    shortDescription:
+      'Managed content operations for an AI-assisted cooking and lifestyle digital content channel across TikTok and YouTube.',
+    responsibilities: [
+      'Planned and developed short-form content concepts based on audience interests and platform behaviour.',
+      'Managed AI-assisted visual content production and creative direction.',
+      'Adapted content for TikTok and YouTube formats.',
+      'Created captions, descriptions and supporting platform content.',
+      'Monitored content performance, including views, retention and engagement patterns.',
+      'Used performance observations to refine content themes, hooks, formats and creative approaches.',
+      'Maintained consistency in the channel’s visual identity and content style.',
+      'Experimented with AI-assisted content production as part of the digital content workflow.',
+    ],
+    tags: ['Content Strategy', 'AI-Assisted Content', 'Performance'],
+  },
+
+  /* ---------------------------------------------------------------- *
+   *  LA MARZOCCO — marketing & hospitality internship                *
+   * ---------------------------------------------------------------- */
+  {
+    slug: 'la-marzocco-internship',
+    title: 'Marketing & Hospitality Intern',
+    category: 'Professional Experience',
+    organization: 'La Marzocco — Florence, Italy',
+    date: 'May 2025 – Aug 2025',
+    shortDescription:
+      'Supported marketing, reporting, content production and hospitality activities for a premium global brand.',
+    responsibilities: [
+      'Built Excel-based tracking systems that improved reporting accuracy and cross-team visibility.',
+      'Supported marketing content production and campaign execution using Canva and Adobe tools.',
+      'Helped align marketing communications and brand messaging across a global operating structure.',
+      'Worked in an international premium-brand environment across marketing and hospitality activities.',
+    ],
+    tools: ['Excel', 'Canva', 'Adobe tools'],
+    tags: ['Reporting', 'Content', 'Hospitality'],
+  },
+
+  /* ---------------------------------------------------------------- *
+   *  CADENCE ACADEMY — digital marketing internship                  *
+   * ---------------------------------------------------------------- */
+  {
+    slug: 'cadence-academy-internship',
+    title: 'Digital Marketing Intern',
+    category: 'Professional Experience',
+    organization: 'Cadence Academy of Design — Mumbai, India',
+    date: 'Dec 2021 – Feb 2022',
+    shortDescription:
+      'Supported digital marketing, campaign reporting, competitor research and social media execution.',
+    responsibilities: [
+      'Compiled campaign performance reports that translated campaign data into insights for stakeholders.',
+      'Researched keywords and benchmarked competitors to inform content and channel strategy.',
+      'Planned and executed social media campaigns across Instagram and Facebook.',
+      'Contributed to a 20% increase in audience engagement through social media activity.',
+      'Worked with design and content teams to maintain consistent messaging across channels.',
+    ],
+    tools: ['Instagram', 'Facebook'],
+    tags: ['Digital Marketing', 'Reporting', 'Social Media'],
+  },
+
+  /* ---------------------------------------------------------------- *
+   *  IFORTIS CORPORATE IT — virtual event organising internship      *
+   * ---------------------------------------------------------------- */
+  {
+    slug: 'ifortis-virtual-events',
+    title: 'Virtual Event Organising Intern',
+    category: 'Professional Experience',
+    organization: 'Ifortis Corporate IT — Mumbai, India',
+    date: 'Jun 2021 – Jul 2021',
+    shortDescription:
+      'Supported international virtual event coordination, digital communications and attendee engagement.',
+    responsibilities: [
+      'Managed scheduling, platform setup and attendee communications for international virtual events.',
+      'Supported digital content and communications to keep international attendees engaged.',
+      'Assisted with online event logistics and coordination across international participants and teams.',
+    ],
+    tags: ['Events', 'Digital Communications'],
   },
 
   /* ---------------------------------------------------------------- *
@@ -123,6 +245,7 @@ export const PROJECTS: Project[] = [
     context: '[WHY DID THIS PROJECT EXIST?]',
     objective: '[WHAT WERE YOU TRYING TO ACCOMPLISH?]',
     role: '[WHAT YOU PERSONALLY DID]',
+    responsibilities: ['[RESPONSIBILITY 1]', '[RESPONSIBILITY 2]'],
     process: '[HOW YOU APPROACHED THE WORK, STEP BY STEP]',
     insights: '[WHAT YOU DISCOVERED — OPTIONAL]',
     recommendations: '[WHAT YOU PROPOSED BASED ON THE EVIDENCE — OPTIONAL]',

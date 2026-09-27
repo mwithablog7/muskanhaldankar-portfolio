@@ -77,6 +77,18 @@ export function Layout({ children }: { children: ReactNode }) {
             <Link to="/work">Work</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
+            {site.contact.email && (
+              <a href={`mailto:${site.contact.email}`}>Email</a>
+            )}
+            {site.contact.linkedin && (
+              <a
+                href={site.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            )}
           </div>
         </div>
       </footer>

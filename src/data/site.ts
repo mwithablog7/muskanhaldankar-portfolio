@@ -23,7 +23,7 @@ export const site = {
 
   /** Short introduction (1–3 sentences). Keep it honest and plain. */
   intro:
-    'Final-year student at the European School of Economics in Italy, building a career where creative marketing meets analytical thinking. I like figuring out why people respond to content, what makes campaigns work, and how data can improve creative decisions.',
+    'Junior marketing professional with hands-on experience across digital marketing, campaign execution, marketing reporting and market research in Italy and India — working across content, social media, events and AI-assisted content management.',
 
   /* ------------------------------------------------------------------ *
    *  ABOUT                                                             *
@@ -34,6 +34,8 @@ export const site = {
    * Leave the array empty ([]) to hide the section.
    */
   about: [
+    'Junior marketing professional with hands-on experience across digital marketing, campaign execution, marketing reporting, and market research in Italy and India, including experience with a premium global brand.',
+    'Experienced in Excel-based tracking and reporting, competitor research, social media strategy, content planning and supporting marketing activities from research and planning through execution and performance reporting. Strong cross-cultural communication and collaboration skills developed across international academic and professional environments.',
     "I'm in my final year at the European School of Economics, based in Italy (academic year 2026/2027). My focus is digital marketing at the intersection of content, analytics and growth — I care about the why behind audience behaviour as much as the numbers behind performance.",
     "I'm looking for entry-level opportunities in digital marketing, content strategy, marketing analytics and growth — particularly in technology, education, automotive, motorsport, or any digitally driven team that takes creativity and data equally seriously.",
     'I learn by building — AI-assisted prototypes, small digital experiments, projects taken from a rough idea to something real. I am practical rather than corporate, and serious about turning curiosity into real expertise.',
@@ -50,11 +52,16 @@ export const site = {
   /** Education — add or remove entries freely. Empty array = hidden. */
   education: [
     {
-      qualification: 'Final-year studies',
-      institution: 'European School of Economics — Italy',
-      dates: 'Academic year 2026/2027',
+      qualification: 'BSc Business Administration — Marketing Specialisation',
+      institution: 'European School of Economics — Florence, Italy',
+      dates: 'Sep 2024 – Present',
       detail:
-        'Relevant modules: UG6005 Buyer Behaviour · FPPW Final Project Preparation Workshop · International Project Management',
+        'Relevant coursework: Market Research · Introduction to Marketing · Cross-Cultural E-Commerce · Corporate Finance · Operations Management · Managing People · Buyer Behaviour · Final Project Preparation Workshop · International Project Management',
+    },
+    {
+      qualification: 'A Levels — Biology, Chemistry, Physics, English',
+      institution: 'RIMS International School and Junior College — Mumbai, India',
+      dates: '2021',
     },
   ],
 
@@ -66,43 +73,70 @@ export const site = {
    */
   skills: [
     {
-      category: 'Content',
+      category: 'Marketing & Research',
       items: [
-        'Content strategy',
-        'Content creation',
-        'Social media',
-        'Creative concepts',
-        'Content performance',
+        'Campaign planning & execution',
+        'Market research',
+        'Competitor research',
+        'Audience research',
+        'Digital marketing',
+        'Social media strategy',
+        'Brand communication',
+        'Consumer behaviour',
       ],
     },
     {
-      category: 'Analytics',
+      category: 'Reporting & Analytics',
       items: [
-        'Marketing analytics',
+        'Marketing reporting',
+        'Excel-based tracking & reporting',
+        'Google Analytics',
         'Performance analysis',
-        'Identifying patterns',
-        'Data interpretation',
-        'Turning observations into recommendations',
+        'Data-informed content optimisation',
       ],
     },
     {
-      category: 'Consumer behaviour',
+      category: 'Creative & Content',
       items: [
-        'Consumer psychology',
-        'Buyer behaviour',
-        'Audience motivation',
-        'Connecting insight to marketing decisions',
+        'Content planning',
+        'Social media content',
+        'Copywriting',
+        'Brand messaging',
+        'Canva',
+        'Adobe Creative Suite',
+        'Photoshop',
+        'Premiere Pro',
+        'CapCut',
       ],
     },
     {
-      category: 'Growth',
-      items: ['Experimentation', 'CRO', 'SEO / content', 'Digital experience testing'],
+      category: 'AI-Assisted Tools',
+      items: [
+        'ChatGPT',
+        'Claude',
+        'Meta AI',
+        'AI-assisted content creation',
+        'AI-assisted research',
+      ],
     },
     {
-      category: 'Creative technology',
-      items: ['AI-assisted prototyping', 'Digital experimentation', 'Building prototypes'],
+      category: 'Professional',
+      items: [
+        'Cross-cultural communication',
+        'Team collaboration',
+        'Adaptability',
+        'Attention to detail',
+        'Time management',
+        'Problem solving',
+      ],
     },
   ],
+
+  /** Languages — shown as chips on the About page. Empty array = hidden. */
+  languages: ['English — C2', 'Hindi — Native', 'Marathi — Native', 'Italian — A2'],
+
+  /** Certifications — shown on the About page. Empty array = hidden. */
+  certifications: ['Digital Marketing Certification — 2022'],
 
   /* ------------------------------------------------------------------ *
    *  CV / RESUME                                                       *
@@ -119,9 +153,12 @@ export const site = {
    *  Never add links you do not actually own.
    */
   contact: {
-    email: '', // e.g. 'you@example.com'
-    linkedin: '', // e.g. 'https://www.linkedin.com/in/yourprofile'
-    other: [] as { label: string; url: string }[],
+    email: 'muskanhaldankar07@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/muskanhaldankar',
+    other: [
+      { label: 'Phone', url: 'tel:+393490671252', display: '+39 349 067 1252' },
+      { label: 'Instagram — mwithablog', url: 'https://www.instagram.com/mwithablog/' },
+    ] as { label: string; url: string; display?: string }[],
   },
 
   /* ------------------------------------------------------------------ *
@@ -130,6 +167,6 @@ export const site = {
   seo: {
     title: 'Muskan Haldankar — Marketing Portfolio',
     description:
-      'Portfolio of Muskan Haldankar — final-year European School of Economics student in Italy, working across digital marketing, content, analytics and growth.',
+      'Portfolio of Muskan Haldankar — junior marketing professional with experience across digital marketing, campaign execution, marketing reporting and market research in Italy and India.',
   },
 };

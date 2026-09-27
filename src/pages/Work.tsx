@@ -29,8 +29,8 @@ export function Work() {
             Work
           </h1>
           <p className="section__lead">
-            Projects across marketing, analytics, content, strategy and
-            creative work.
+            Professional experience and independent projects across marketing,
+            content, analytics, research and events.
           </p>
         </div>
 

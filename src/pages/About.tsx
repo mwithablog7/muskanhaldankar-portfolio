@@ -101,6 +101,42 @@ export function About() {
         </section>
       )}
 
+      {site.languages.length > 0 && (
+        <section className="section" aria-labelledby="languages">
+          <div className="section__head">
+            <p className="section__eyebrow">Communication</p>
+            <h2 className="section__title" id="languages">
+              Languages
+            </h2>
+          </div>
+          <div className="card__tags">
+            {site.languages.map((lang) => (
+              <span className="tag" key={lang}>
+                {lang}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {site.certifications.length > 0 && (
+        <section className="section" aria-labelledby="certification">
+          <div className="section__head">
+            <p className="section__eyebrow">Credentials</p>
+            <h2 className="section__title" id="certification">
+              Certification
+            </h2>
+          </div>
+          <div className="card__tags">
+            {site.certifications.map((cert) => (
+              <span className="tag" key={cert}>
+                {cert}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
       {site.cvUrl && (
         <section className="section" aria-labelledby="cv">
           <div className="section__head">
