@@ -14,7 +14,8 @@ export function Contact() {
           Contact
         </h1>
         <p className="section__lead">
-          The best way to reach me is below.
+          For opportunities, collaborations and project enquiries — the
+          fastest ways to reach me are below.
         </p>
       </div>
 

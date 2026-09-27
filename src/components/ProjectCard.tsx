@@ -1,12 +1,32 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import type { Project } from '../data/projects';
 import { SmartImage } from './SmartImage';
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
   const cover = project.images?.[0];
+  const navigate = useNavigate();
+
+  const go = () => navigate(`/work/${project.slug}`);
 
   return (
-    <article className="card">
+    <article
+      className="card"
+      style={{ '--i': index } as React.CSSProperties}
+      role="link"
+      tabIndex={0}
+      aria-label={`${project.title} — open page`}
+      onClick={(e) => {
+        // Let real links inside the card behave normally.
+        if ((e.target as HTMLElement).closest('a')) return;
+        go();
+      }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          go();
+        }
+      }}
+    >
       {cover !== undefined && (
         <div className="card__media">
           <SmartImage src={cover} alt={project.title} />
@@ -37,6 +57,10 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         )}
+        <span className="card__cta" aria-hidden="true">
+          View details
+          <span className="card__arrow">→</span>
+        </span>
       </div>
     </article>
   );

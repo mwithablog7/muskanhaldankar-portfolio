@@ -45,6 +45,10 @@ export type Project = {
   role?: string;
   /** What you were responsible for — shown as a bullet list. */
   responsibilities?: string[];
+  /** Short year label used on the Experience timeline, e.g. '2026', 'Ongoing'. */
+  timelineYear?: string;
+  /** Label used on the Experience timeline, e.g. 'La Marzocco — Marketing & Hospitality'. */
+  timelineLabel?: string;
   /** How you approached the work. */
   process?: string;
   /** Tools you actually used. No invented tool names. */
@@ -95,6 +99,8 @@ export const PROJECTS: Project[] = [
     category: 'Professional Experience',
     organization: 'Automobile Club Trento — ECOdolomitesGT 2026',
     date: 'Jul 2026 – Oct 2026',
+    timelineYear: '2026',
+    timelineLabel: 'Automobile Club Trento — ECOdolomitesGT',
     shortDescription:
       'Supported marketing communications and event-related activities for an FIA-sanctioned electric vehicle rally in Italy.',
     detailedDescription:
@@ -153,6 +159,8 @@ export const PROJECTS: Project[] = [
     category: 'Digital & Content',
     organization: 'Confidential Digital Content Project — TikTok & YouTube',
     date: 'Ongoing',
+    timelineYear: 'Ongoing',
+    timelineLabel: 'AI-Assisted Content & Channel Management',
     shortDescription:
       'Managed content operations for an AI-assisted cooking and lifestyle digital content channel across TikTok and YouTube.',
     responsibilities: [
@@ -177,6 +185,8 @@ export const PROJECTS: Project[] = [
     category: 'Professional Experience',
     organization: 'La Marzocco — Florence, Italy',
     date: 'May 2025 – Aug 2025',
+    timelineYear: '2025',
+    timelineLabel: 'La Marzocco — Marketing & Hospitality',
     shortDescription:
       'Supported marketing, reporting, content production and hospitality activities for a premium global brand.',
     responsibilities: [
@@ -198,6 +208,8 @@ export const PROJECTS: Project[] = [
     category: 'Professional Experience',
     organization: 'Cadence Academy of Design — Mumbai, India',
     date: 'Dec 2021 – Feb 2022',
+    timelineYear: '2021–2022',
+    timelineLabel: 'Cadence Academy of Design — Digital Marketing',
     shortDescription:
       'Supported digital marketing, campaign reporting, competitor research and social media execution.',
     responsibilities: [
@@ -220,6 +232,8 @@ export const PROJECTS: Project[] = [
     category: 'Professional Experience',
     organization: 'Ifortis Corporate IT — Mumbai, India',
     date: 'Jun 2021 – Jul 2021',
+    timelineYear: '2021',
+    timelineLabel: 'Ifortis Corporate IT — Virtual Events',
     shortDescription:
       'Supported international virtual event coordination, digital communications and attendee engagement.',
     responsibilities: [

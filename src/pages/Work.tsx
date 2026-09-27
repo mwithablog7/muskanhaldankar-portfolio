@@ -23,7 +23,7 @@ export function Work() {
   return (
     <>
       <section className="section" aria-labelledby="work-title">
-        <div className="section__head">
+        <div className="section__head" data-reveal>
           <p className="section__eyebrow">Portfolio</p>
           <h1 className="section__title" id="work-title">
             Work
@@ -56,9 +56,9 @@ export function Work() {
             </div>
 
             {shown.length > 0 ? (
-              <div className="grid">
-                {shown.map((p) => (
-                  <ProjectCard key={p.slug} project={p} />
+              <div className="grid" key={filter}>
+                {shown.map((p, i) => (
+                  <ProjectCard key={p.slug} project={p} index={i} />
                 ))}
               </div>
             ) : (

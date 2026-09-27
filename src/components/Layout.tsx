@@ -27,6 +27,53 @@ export function Layout({ children }: { children: ReactNode }) {
     meta.setAttribute('content', site.seo.description);
   }, [location.pathname]);
 
+  // Gentle text reveals: fade in sections as they enter the viewport.
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (els.length === 0) return;
+
+    const showAll = () => els.forEach((el) => el.classList.add('is-in'));
+    if (reduce || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => io.observe(el));
+
+    // Scroll fallback: self-heals if the IntersectionObserver misfires
+    // (also keeps reveals working in environments without a live compositor).
+    const revealNow = (el: HTMLElement) => el.classList.add('is-in');
+    const onScroll = () => {
+      els.forEach((el) => {
+        if (
+          !el.classList.contains('is-in') &&
+          el.getBoundingClientRect().top < window.innerHeight * 0.92
+        ) {
+          revealNow(el);
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    return () => {
+      io.disconnect();
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, [location.pathname]);
+
   return (
     <div className="shell">
       <header className="site-header">

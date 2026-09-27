@@ -1,4 +1,5 @@
 import { site } from '../data/site';
+import { SkillsExplorer } from '../components/SkillsExplorer';
 
 export function About() {
   return (
@@ -9,7 +10,9 @@ export function About() {
           <h1 className="section__title" id="about-title">
             {site.name}
           </h1>
-          <p className="section__lead">{site.positioning}</p>
+          <p className="section__lead">
+            Junior Marketing Professional — {site.positioning}
+          </p>
         </div>
 
         <div className="prose">
@@ -25,6 +28,18 @@ export function About() {
         </div>
       </section>
 
+      {site.skills.length > 0 && (
+        <section className="section" aria-labelledby="about-skills">
+          <div className="section__head">
+            <p className="section__eyebrow">Capabilities</p>
+            <h2 className="section__title" id="about-skills">
+              Skills
+            </h2>
+          </div>
+          <SkillsExplorer />
+        </section>
+      )}
+
       {site.interests.length > 0 && (
         <section className="section" aria-labelledby="interests">
           <div className="section__head">
@@ -38,64 +53,6 @@ export function About() {
               <span className="tag" key={interest}>
                 {interest}
               </span>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {site.skills.length > 0 && (
-        <section className="section" aria-labelledby="about-skills">
-          <div className="section__head">
-            <p className="section__eyebrow">Capabilities</p>
-            <h2 className="section__title" id="about-skills">
-              Skills
-            </h2>
-          </div>
-          <div className="skills-grid">
-            {site.skills.map((group) => (
-              <div className="skill-group" key={group.category}>
-                <h3>{group.category}</h3>
-                <ul>
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {site.education.length > 0 && (
-        <section className="section" aria-labelledby="education">
-          <div className="section__head">
-            <p className="section__eyebrow">Background</p>
-            <h2 className="section__title" id="education">
-              Education
-            </h2>
-          </div>
-          <div className="skills-grid">
-            {site.education.map((entry, i) => (
-              <div className="skill-group" key={i}>
-                <h3>{entry.qualification}</h3>
-                <p style={{ margin: 0, color: 'var(--ink-soft)' }}>
-                  {entry.institution}
-                </p>
-                <p
-                  style={{
-                    margin: '4px 0 0',
-                    color: 'var(--ink-faint)',
-                    fontSize: 14,
-                  }}
-                >
-                  {entry.dates}
-                </p>
-                {entry.detail && (
-                  <p style={{ margin: '8px 0 0', color: 'var(--ink-soft)' }}>
-                    {entry.detail}
-                  </p>
-                )}
-              </div>
             ))}
           </div>
         </section>
@@ -132,6 +89,44 @@ export function About() {
               <span className="tag" key={cert}>
                 {cert}
               </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {site.education.length > 0 && (
+        <section className="section" aria-labelledby="education">
+          <div className="section__head">
+            <p className="section__eyebrow">Background</p>
+            <h2 className="section__title" id="education">
+              Education
+            </h2>
+            <p className="section__lead">
+              Supporting background to my professional experience.
+            </p>
+          </div>
+          <div className="skills-grid">
+            {site.education.map((entry, i) => (
+              <div className="skill-group" key={i}>
+                <h3>{entry.qualification}</h3>
+                <p style={{ margin: 0, color: 'var(--ink-soft)' }}>
+                  {entry.institution}
+                </p>
+                <p
+                  style={{
+                    margin: '4px 0 0',
+                    color: 'var(--ink-faint)',
+                    fontSize: 14,
+                  }}
+                >
+                  {entry.dates}
+                </p>
+                {entry.detail && (
+                  <p style={{ margin: '8px 0 0', color: 'var(--ink-soft)' }}>
+                    {entry.detail}
+                  </p>
+                )}
+              </div>
             ))}
           </div>
         </section>

@@ -19,11 +19,11 @@ export const site = {
   name: 'Muskan Haldankar',
 
   /** Professional positioning line shown under your name. */
-  positioning: 'Digital Marketing • Content • Analytics • Growth',
+  positioning: 'Digital Marketing · Marketing Reporting · Research · Content · Growth',
 
   /** Short introduction (1–3 sentences). Keep it honest and plain. */
   intro:
-    'Junior marketing professional with hands-on experience across digital marketing, campaign execution, marketing reporting and market research in Italy and India — working across content, social media, events and AI-assisted content management.',
+    'I work across marketing execution, reporting, research, content and digital experiences — turning audience insight into creative, data-informed marketing.',
 
   /* ------------------------------------------------------------------ *
    *  ABOUT                                                             *
@@ -34,11 +34,11 @@ export const site = {
    * Leave the array empty ([]) to hide the section.
    */
   about: [
-    'Junior marketing professional with hands-on experience across digital marketing, campaign execution, marketing reporting, and market research in Italy and India, including experience with a premium global brand.',
+    'Junior marketing professional working across digital marketing, marketing reporting, market research, content and campaign support — with hands-on experience in Italy and India, including a premium global brand.',
     'Experienced in Excel-based tracking and reporting, competitor research, social media strategy, content planning and supporting marketing activities from research and planning through execution and performance reporting. Strong cross-cultural communication and collaboration skills developed across international academic and professional environments.',
-    "I'm in my final year at the European School of Economics, based in Italy (academic year 2026/2027). My focus is digital marketing at the intersection of content, analytics and growth — I care about the why behind audience behaviour as much as the numbers behind performance.",
-    "I'm looking for entry-level opportunities in digital marketing, content strategy, marketing analytics and growth — particularly in technology, education, automotive, motorsport, or any digitally driven team that takes creativity and data equally seriously.",
-    'I learn by building — AI-assisted prototypes, small digital experiments, projects taken from a rough idea to something real. I am practical rather than corporate, and serious about turning curiosity into real expertise.',
+    'My work sits at the intersection of content, analytics and growth — I care about the why behind audience behaviour as much as the numbers behind performance.',
+    'Currently open to junior marketing opportunities in digital marketing, content strategy, marketing analytics and growth — particularly in technology, education, automotive, motorsport, or any digitally driven team that takes creativity and data equally seriously.',
+    'I learn by building — AI-assisted prototypes, small digital experiments, projects taken from a rough idea to something real. I am practical rather than corporate, and serious about turning marketing craft into lasting expertise.',
   ],
 
   /** Interests — free-form list. Empty array = section hidden. */
@@ -49,7 +49,7 @@ export const site = {
     'Digital experiences & AI-assisted prototyping',
   ],
 
-  /** Education — add or remove entries freely. Empty array = hidden. */
+  /** Education — supporting background. Empty array = hidden. */
   education: [
     {
       qualification: 'BSc Business Administration — Marketing Specialisation',
@@ -66,23 +66,19 @@ export const site = {
   ],
 
   /* ------------------------------------------------------------------ *
-   *  SKILLS                                                            *
+   *  SKILLS — shown as the interactive capability explorer             *
    * ------------------------------------------------------------------ *
    *  Categories are fully editable — rename, add, remove.
    *  NO percentages, levels or progress bars are ever shown.
    */
   skills: [
     {
-      category: 'Marketing & Research',
+      category: 'Marketing',
       items: [
         'Campaign planning & execution',
-        'Market research',
-        'Competitor research',
-        'Audience research',
         'Digital marketing',
         'Social media strategy',
         'Brand communication',
-        'Consumer behaviour',
       ],
     },
     {
@@ -96,7 +92,16 @@ export const site = {
       ],
     },
     {
-      category: 'Creative & Content',
+      category: 'Research',
+      items: [
+        'Market research',
+        'Competitor research',
+        'Audience research',
+        'Consumer behaviour',
+      ],
+    },
+    {
+      category: 'Content & Creative',
       items: [
         'Content planning',
         'Social media content',
@@ -110,24 +115,13 @@ export const site = {
       ],
     },
     {
-      category: 'AI-Assisted Tools',
+      category: 'AI-Assisted Digital Work',
       items: [
         'ChatGPT',
         'Claude',
         'Meta AI',
         'AI-assisted content creation',
         'AI-assisted research',
-      ],
-    },
-    {
-      category: 'Professional',
-      items: [
-        'Cross-cultural communication',
-        'Team collaboration',
-        'Adaptability',
-        'Attention to detail',
-        'Time management',
-        'Problem solving',
       ],
     },
   ],
@@ -157,6 +151,7 @@ export const site = {
     linkedin: 'https://www.linkedin.com/in/muskanhaldankar',
     other: [
       { label: 'Phone', url: 'tel:+393490671252', display: '+39 349 067 1252' },
+      { label: 'Email — mwithablog', url: 'mailto:mwithablog7@gmail.com', display: 'mwithablog7@gmail.com' },
       { label: 'Instagram — mwithablog', url: 'https://www.instagram.com/mwithablog/' },
     ] as { label: string; url: string; display?: string }[],
   },
@@ -165,8 +160,8 @@ export const site = {
    *  SEO — used for <title> and Open Graph tags                         *
    * ------------------------------------------------------------------ */
   seo: {
-    title: 'Muskan Haldankar — Marketing Portfolio',
+    title: 'Muskan Haldankar — Junior Marketing Professional',
     description:
-      'Portfolio of Muskan Haldankar — junior marketing professional with experience across digital marketing, campaign execution, marketing reporting and market research in Italy and India.',
+      'Portfolio of Muskan Haldankar — junior marketing professional working across digital marketing, marketing reporting, market research, content and growth in Italy and India.',
   },
 };
